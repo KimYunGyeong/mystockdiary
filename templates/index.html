@@ -1,0 +1,83 @@
+<!Doctype html>
+<html lang="ko">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato&family=Righteous&display=swap"
+          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Great+Vibes&family=Lato&family=Nanum+Brush+Script&family=Nanum+Myeongjo&family=Righteous&display=swap"
+          rel="stylesheet">
+    <!-- date -->
+    <script type="text/javascript">
+
+        document.write(Date() + '<br />');
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                Type: "GET",
+                url: "https://api.manana.kr/exchange/rate.json",
+                data: {},
+                success: function (response) {
+                    let nowrate = response[1]['rate'];
+                    $('#rate-box').text(nowrate)
+                }
+            })
+        })
+
+    </script>
+
+    <style type="text/css">
+        .container {
+            margin: auto 30px;
+        }
+
+        .display-4 {
+            font-weight: bold;
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .lead {
+            font-family: 'Nanum Myeongjo', serif;
+        }
+        .rate {
+            padding-left: 40px;
+        }
+
+    </style>
+
+    <title>My Stock Diary</title>
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+
+        <h1 class="display-4">My Stock Diary</h1>
+        <hr class="my-4">
+        <p class="lead">관심이 있는 미국 주식 종목을 나의 포트폴리오에 담아 관리해보세요.</p>
+    </div>
+</div>
+<div class="rate">
+    달러(원) 환율: <span id="rate-box"></span>
+</div>
+
+</body>
+</html>
