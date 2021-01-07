@@ -42,7 +42,6 @@
                 }
             })
         })
-
     </script>
 
     <style type="text/css">
@@ -58,8 +57,13 @@
         .lead {
             font-family: 'Nanum Myeongjo', serif;
         }
-        .rate {
-            padding-left: 40px;
+
+        hr.innerHeader {
+            width: auto;
+            border-width: 3px;
+            border-bottom: 0px;
+            text-align: left;
+            margin-left: 0px;
         }
 
     </style>
@@ -75,9 +79,21 @@
         <p class="lead">관심이 있는 미국 주식 종목을 나의 포트폴리오에 담아 관리해보세요.</p>
     </div>
 </div>
-<div class="rate">
-    달러(원) 환율: <span id="rate-box"></span>
-</div>
 
+<h1>Stock List&nbsp;<span style="font-size: medium"> (원)달러 환율:<span id="rate-box"></span></span></h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">선택</th>
+        <th scope="col">종목</th>
+        <th scope="col">현재가</th>
+        <th scope="col">고가</th>
+        <th scope="col">저가</th>
+        <th scope="col">변동</th>
+        <th scope="col">변동(%)</th>
+    </tr>
+    </thead>
+</table>
 </body>
 </html>
