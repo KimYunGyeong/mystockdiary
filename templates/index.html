@@ -66,6 +66,16 @@
             margin-left: 0px;
         }
 
+        .left {
+            width: 50%;
+            float: left;
+        }
+
+        .right {
+            width: 50%;
+            float: right;
+        }
+
     </style>
 
     <title>My Stock Diary</title>
@@ -79,21 +89,38 @@
         <p class="lead">관심이 있는 미국 주식 종목을 나의 포트폴리오에 담아 관리해보세요.</p>
     </div>
 </div>
+<div class="left">
+    <h1>Stock List&nbsp;<span style="font-size: medium"> (원)달러 환율:<span id="rate-box"></span></span></h1>
 
-<h1>Stock List&nbsp;<span style="font-size: medium"> (원)달러 환율:<span id="rate-box"></span></span></h1>
-
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">선택</th>
-        <th scope="col">종목</th>
-        <th scope="col">현재가</th>
-        <th scope="col">고가</th>
-        <th scope="col">저가</th>
-        <th scope="col">변동</th>
-        <th scope="col">변동(%)</th>
-    </tr>
-    </thead>
-</table>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">선택</th>
+            <th scope="col">종목</th>
+            <th scope="col">현재가</th>
+            <th scope="col">고가</th>
+            <th scope="col">저가</th>
+            <th scope="col">변동</th>
+            <th scope="col">변동(%)</th>
+        </tr>
+        </thead>
+    </table>
+</div>
+<div class="right">
+    <h1>My Portfolio</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">선택</th>
+            <th scope="col">종목</th>
+            <th scope="col">현재가</th>
+            <th scope="col">고가</th>
+            <th scope="col">저가</th>
+            <th scope="col">변동</th>
+            <th scope="col">변동(%)</th>
+        </tr>
+        </thead>
+    </table>
+</div>
 </body>
 </html>
