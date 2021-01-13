@@ -13,7 +13,6 @@ data = requests.get('https://kr.investing.com/equities/united-states', headers=h
 soup = BeautifulSoup(data.text, 'html.parser')
 
 diaries = soup.select('#cross_rate_markets_stocks_1 > tbody > tr')
-
-
+print(diaries)
 
 #cross_rate_markets_stocks_1 > tbody
